@@ -21,8 +21,8 @@ public class BaseTest extends Assert {
         System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
 
-//        driver = new ChromeDriver();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+//        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();

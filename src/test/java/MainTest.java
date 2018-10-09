@@ -6,5 +6,6 @@ public class MainTest extends BaseTest {
     @Test
     public static void openUrl() {
         driver.navigate().to("https://vk.com/");
+        System.out.println("Finish");
     }
 }

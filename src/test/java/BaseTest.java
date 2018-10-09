@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest extends Assert {
 
-    private static String driverPath = "driver/";
+    private static String driverPath = "/home/anton/IdeaProjects/Jenkins_Testnig/driver/";
     public static WebDriver driver;
     protected WebDriverWait wait;
 

@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -16,9 +17,12 @@ public class BaseTest extends Assert {
     @BeforeClass
     public void setUp() {
 
+
+        System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
 
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();

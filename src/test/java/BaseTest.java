@@ -25,7 +25,7 @@ public class BaseTest extends Assert {
 //        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
     }
 
     @AfterSuite
